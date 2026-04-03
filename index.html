@@ -322,7 +322,253 @@
                 </p>
             </div>
         </div>
+
+        <!-- ★ FLOATING CTA (positioned where product bounces) ★ -->
+        <a href="#products" id="hero-cta" class="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-40" style="visibility:hidden" data-anim="scatter">
+            <button class="group relative bg-[#f9ee1a] border-4 border-[#0d1512] text-[#0d1512] px-8 md:px-12 py-3 md:py-4 text-sm md:text-lg font-['Archivo_Black',_sans-serif] uppercase tracking-wider shadow-[6px_6px_0px_#fb57b6] hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_#fb57b6] transition-all rounded-full flex items-center gap-3 animate-bounce">
+                <span>Shop Now</span>
+                <span class="text-xl md:text-2xl group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+        </a>
     </main>
+
+    <!-- ════════════════════════════════════════ -->
+    <!--          PRODUCTS SHOWCASE              -->
+    <!-- ════════════════════════════════════════ -->
+    <section id="products" class="relative w-full bg-white border-t-4 border-[#0d1512] py-16 md:py-24 overflow-hidden">
+        <!-- Marquee divider -->
+        <div class="w-full bg-[#0d1512] border-y-3 border-[#fb57b6] overflow-hidden py-2 mb-12 md:mb-16">
+            <div class="marquee-track">
+                <span class="text-[#34f0be] font-['Archivo_Black',_sans-serif] text-sm md:text-base uppercase tracking-[0.25em] whitespace-nowrap px-6">
+                    ★ OUR PRODUCTS &nbsp;✦&nbsp; ROLL DIFFERENT &nbsp;✦&nbsp; PREMIUM HEMP &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp; OUR PRODUCTS &nbsp;✦&nbsp; ROLL DIFFERENT &nbsp;✦&nbsp; PREMIUM HEMP &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp;
+                </span>
+                <span class="text-[#34f0be] font-['Archivo_Black',_sans-serif] text-sm md:text-base uppercase tracking-[0.25em] whitespace-nowrap px-6">
+                    ★ OUR PRODUCTS &nbsp;✦&nbsp; ROLL DIFFERENT &nbsp;✦&nbsp; PREMIUM HEMP &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp; OUR PRODUCTS &nbsp;✦&nbsp; ROLL DIFFERENT &nbsp;✦&nbsp; PREMIUM HEMP &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp;
+                </span>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <!-- Section Header -->
+            <div class="text-center mb-12 md:mb-20">
+                <p class="font-['Archivo_Black',_sans-serif] text-[#fb57b6] text-sm uppercase tracking-[0.3em] mb-3">What We Roll</p>
+                <h2 class="font-['Press_Start_2P',_cursive] text-[#0d1512] text-2xl md:text-4xl lg:text-5xl leading-relaxed">OUR STASH</h2>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+
+                <!-- Product 1: Rolling Papers -->
+                <div class="product-card group relative bg-[#34f0be] border-4 border-[#0d1512] rounded-3xl p-6 md:p-10 shadow-[8px_8px_0px_#0d1512] hover:shadow-[4px_4px_0px_#0d1512] hover:translate-x-1 hover:translate-y-1 transition-all overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-[#f9ee1a] border-2 border-[#0d1512] px-3 py-1 rounded-full">
+                        <span class="font-['Archivo_Black',_sans-serif] text-[10px] uppercase text-[#0d1512] tracking-wider">Bestseller 🔥</span>
+                    </div>
+                    <div class="flex items-center justify-center py-6 md:py-10">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7b4959ae-3afe-484a-b198-1643b95c503d_1600w.png" alt="GANG Rolling Papers" class="w-48 md:w-64 h-auto object-contain group-hover:scale-105 group-hover:rotate-[-3deg] transition-all duration-300 drop-shadow-[12px_12px_0px_rgba(13,21,18,0.15)]">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-['Archivo_Black',_sans-serif] text-xl md:text-2xl text-[#0d1512] uppercase mb-2">Rolling Papers</h3>
+                        <p class="text-sm md:text-base text-[#0d1512]/70 font-medium mb-6">Unbleached organic hemp. Ultra-thin. Slow burn. Zero chemicals.</p>
+                        <div class="flex items-center justify-center gap-4">
+                            <span class="font-['Archivo_Black',_sans-serif] text-2xl text-[#0d1512]">$4.99</span>
+                            <button class="bg-[#0d1512] text-[#f9ee1a] border-3 border-[#0d1512] px-6 py-2.5 font-bold uppercase text-sm tracking-wider rounded-full hover:bg-[#fb57b6] hover:text-white transition-colors shadow-[4px_4px_0px_#fb57b6] hover:shadow-[2px_2px_0px_#0d1512]">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Pre-Rolled Cones -->
+                <div class="product-card group relative bg-[#fb57b6] border-4 border-[#0d1512] rounded-3xl p-6 md:p-10 shadow-[8px_8px_0px_#0d1512] hover:shadow-[4px_4px_0px_#0d1512] hover:translate-x-1 hover:translate-y-1 transition-all overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-[#f9ee1a] border-2 border-[#0d1512] px-3 py-1 rounded-full">
+                        <span class="font-['Archivo_Black',_sans-serif] text-[10px] uppercase text-[#0d1512] tracking-wider">New Drop 🆕</span>
+                    </div>
+                    <div class="flex items-center justify-center py-6 md:py-10">
+                        <div class="text-8xl md:text-9xl group-hover:scale-105 group-hover:rotate-[3deg] transition-all duration-300 drop-shadow-[12px_12px_0px_rgba(13,21,18,0.15)]">🌿</div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-['Archivo_Black',_sans-serif] text-xl md:text-2xl text-white uppercase mb-2">Pre-Rolled Cones</h3>
+                        <p class="text-sm md:text-base text-white/80 font-medium mb-6">Ready to pack. Perfect shape every time. Same premium organic hemp.</p>
+                        <div class="flex items-center justify-center gap-4">
+                            <span class="font-['Archivo_Black',_sans-serif] text-2xl text-white">$6.99</span>
+                            <button class="bg-[#f9ee1a] text-[#0d1512] border-3 border-[#0d1512] px-6 py-2.5 font-bold uppercase text-sm tracking-wider rounded-full hover:bg-white transition-colors shadow-[4px_4px_0px_#0d1512] hover:shadow-[2px_2px_0px_#0d1512]">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!--         WHY GANG? FEATURES              -->
+    <!-- ════════════════════════════════════════ -->
+    <section class="relative w-full bg-[#0d1512] py-16 md:py-24 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-12 md:mb-20">
+                <p class="font-['Archivo_Black',_sans-serif] text-[#34f0be] text-sm uppercase tracking-[0.3em] mb-3">The Difference</p>
+                <h2 class="font-['Press_Start_2P',_cursive] text-[#f9ee1a] text-xl md:text-3xl lg:text-4xl leading-relaxed">WHY GANG?</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-[#0d1512] border-3 border-[#34f0be] rounded-2xl p-6 text-center hover:border-[#fb57b6] hover:-translate-y-2 transition-all group">
+                    <div class="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform">🌿</div>
+                    <h3 class="font-['Archivo_Black',_sans-serif] text-white text-sm uppercase tracking-wider mb-2">100% Organic</h3>
+                    <p class="text-white/60 text-xs leading-relaxed">Pure unbleached hemp. No chemicals, no BS. Just nature doing its thing.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-[#0d1512] border-3 border-[#34f0be] rounded-2xl p-6 text-center hover:border-[#fb57b6] hover:-translate-y-2 transition-all group">
+                    <div class="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform">🕐</div>
+                    <h3 class="font-['Archivo_Black',_sans-serif] text-white text-sm uppercase tracking-wider mb-2">Slow Burn</h3>
+                    <p class="text-white/60 text-xs leading-relaxed">Engineered to burn 40% slower. Every session lasts longer, hits smoother.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-[#0d1512] border-3 border-[#34f0be] rounded-2xl p-6 text-center hover:border-[#fb57b6] hover:-translate-y-2 transition-all group">
+                    <div class="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform">🚫</div>
+                    <h3 class="font-['Archivo_Black',_sans-serif] text-white text-sm uppercase tracking-wider mb-2">No Harsh Ash</h3>
+                    <p class="text-white/60 text-xs leading-relaxed">Clean white ash every time. No black residue, no throat hit, no regrets.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-[#0d1512] border-3 border-[#34f0be] rounded-2xl p-6 text-center hover:border-[#fb57b6] hover:-translate-y-2 transition-all group">
+                    <div class="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform">👅</div>
+                    <h3 class="font-['Archivo_Black',_sans-serif] text-white text-sm uppercase tracking-wider mb-2">Pure Flavor</h3>
+                    <p class="text-white/60 text-xs leading-relaxed">Taste what you packed, not the paper. Ultra-thin for zero interference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!--            VIBES / SOCIAL               -->
+    <!-- ════════════════════════════════════════ -->
+    <section class="relative w-full bg-[#34f0be] border-t-4 border-[#0d1512] py-16 md:py-24 overflow-hidden" style="background-image: linear-gradient(rgba(13, 21, 18, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 21, 18, 0.06) 1px, transparent 1px); background-size: 48px 48px;">
+        <div class="max-w-5xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-12 md:mb-16">
+                <p class="font-['Archivo_Black',_sans-serif] text-[#fb57b6] text-sm uppercase tracking-[0.3em] mb-3">Real Talk</p>
+                <h2 class="font-['Press_Start_2P',_cursive] text-[#0d1512] text-xl md:text-3xl lg:text-4xl leading-relaxed">THE VIBES</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Vibe 1 -->
+                <div class="bg-white border-4 border-[#0d1512] rounded-2xl p-6 shadow-[6px_6px_0px_#fb57b6] hover:shadow-[3px_3px_0px_#fb57b6] hover:translate-x-1 hover:translate-y-1 transition-all">
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-[#f9ee1a] text-lg">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-[#0d1512]/80 font-medium leading-relaxed mb-4">"Switched from RAW and never going back. These burn so smooth it's unreal. Plus the packaging is fire 🔥🔥"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-[#fb57b6] rounded-full border-2 border-[#0d1512] flex items-center justify-center text-white text-xs font-bold">J</div>
+                        <div>
+                            <p class="font-bold text-sm text-[#0d1512]">@jaysmokes</p>
+                            <p class="text-[10px] text-[#0d1512]/50">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vibe 2 -->
+                <div class="bg-white border-4 border-[#0d1512] rounded-2xl p-6 shadow-[6px_6px_0px_#f9ee1a] hover:shadow-[3px_3px_0px_#f9ee1a] hover:translate-x-1 hover:translate-y-1 transition-all">
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-[#f9ee1a] text-lg">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-[#0d1512]/80 font-medium leading-relaxed mb-4">"The pre-rolled cones are a game changer. Perfect shape every single time. My whole crew switched to GANG 💨"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-[#06b6d4] rounded-full border-2 border-[#0d1512] flex items-center justify-center text-white text-xs font-bold">M</div>
+                        <div>
+                            <p class="font-bold text-sm text-[#0d1512]">@maxvibes</p>
+                            <p class="text-[10px] text-[#0d1512]/50">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vibe 3 -->
+                <div class="bg-white border-4 border-[#0d1512] rounded-2xl p-6 shadow-[6px_6px_0px_#34f0be] hover:shadow-[3px_3px_0px_#34f0be] hover:translate-x-1 hover:translate-y-1 transition-all">
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-[#f9ee1a] text-lg">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-[#0d1512]/80 font-medium leading-relaxed mb-4">"100% organic and you can actually taste the difference. No more chemical paper taste. This is the one ✨"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-[#f9ee1a] rounded-full border-2 border-[#0d1512] flex items-center justify-center text-[#0d1512] text-xs font-bold">K</div>
+                        <div>
+                            <p class="font-bold text-sm text-[#0d1512]">@kushqueen</p>
+                            <p class="text-[10px] text-[#0d1512]/50">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!--          NEWSLETTER / CTA               -->
+    <!-- ════════════════════════════════════════ -->
+    <section class="relative w-full bg-[#fb57b6] border-t-4 border-[#0d1512] py-14 md:py-20 overflow-hidden">
+        <div class="max-w-3xl mx-auto px-6 md:px-12 text-center">
+            <h2 class="font-['Press_Start_2P',_cursive] text-white text-lg md:text-2xl lg:text-3xl leading-relaxed mb-4 drop-shadow-[3px_3px_0px_#0d1512]">JOIN THE GANG</h2>
+            <p class="text-white/90 text-sm md:text-base font-medium mb-8 max-w-md mx-auto">Get early access to new drops, exclusive merch, and 15% off your first order.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto">
+                <input type="email" placeholder="your@email.com" class="w-full sm:flex-1 px-5 py-3 bg-white border-3 border-[#0d1512] rounded-full text-sm font-semibold text-[#0d1512] placeholder:text-[#0d1512]/40 outline-none focus:shadow-[4px_4px_0px_#f9ee1a] transition-shadow">
+                <button class="w-full sm:w-auto bg-[#f9ee1a] border-3 border-[#0d1512] text-[#0d1512] px-8 py-3 font-['Archivo_Black',_sans-serif] text-sm uppercase tracking-wider rounded-full shadow-[4px_4px_0px_#0d1512] hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0px_#0d1512] transition-all">
+                    I'm In 🤙
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!--               FOOTER                     -->
+    <!-- ════════════════════════════════════════ -->
+    <footer class="w-full bg-[#0d1512] border-t-4 border-[#fb57b6] py-10 md:py-14">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+                <!-- Brand -->
+                <div class="col-span-2 md:col-span-1">
+                    <img src="./logo.png" alt="GANG Logo" class="h-12 w-auto object-contain mb-4 drop-shadow-[3px_3px_0px_#fb57b6]">
+                    <p class="text-white/50 text-xs leading-relaxed">Rolling different since day one. 100% organic. 100% trippy. No cap.</p>
+                </div>
+                <!-- Shop -->
+                <div>
+                    <h4 class="font-['Archivo_Black',_sans-serif] text-[#f9ee1a] text-xs uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Rolling Papers</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Pre-Rolled Cones</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Bundles</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Merch</a></li>
+                    </ul>
+                </div>
+                <!-- Info -->
+                <div>
+                    <h4 class="font-['Archivo_Black',_sans-serif] text-[#f9ee1a] text-xs uppercase tracking-wider mb-4">Info</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Our Story</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Shipping</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                    <h4 class="font-['Archivo_Black',_sans-serif] text-[#f9ee1a] text-xs uppercase tracking-wider mb-4">Connect</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 bg-[#34f0be] border-2 border-[#0d1512] rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors shadow-[2px_2px_0px_#fb57b6]">
+                            <iconify-icon icon="mdi:instagram" width="18"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-[#34f0be] border-2 border-[#0d1512] rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors shadow-[2px_2px_0px_#fb57b6]">
+                            <iconify-icon icon="mdi:twitter" width="18"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-[#34f0be] border-2 border-[#0d1512] rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors shadow-[2px_2px_0px_#fb57b6]">
+                            <iconify-icon icon="mdi:tiktok" width="18"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom bar -->
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-white/30 text-[10px]">© 2026 GANG Rolling Papers. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-white/30 text-[10px] hover:text-[#34f0be] transition-colors">Privacy</a>
+                    <a href="#" class="text-white/30 text-[10px] hover:text-[#34f0be] transition-colors">Terms</a>
+                    <a href="#" class="text-white/30 text-[10px] hover:text-[#34f0be] transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Particle container for throw bursts -->
     <div id="particles" class="fixed inset-0 pointer-events-none z-[60]"></div>
@@ -374,9 +620,27 @@
         )
         .fromTo("[data-anim='scatter']",
             { scale: 0, autoAlpha: 0, rotation: () => gsap.utils.random(-25, 25) },
-            { scale: 1, autoAlpha: 1, rotation: (i) => [-6,5,-3,4,-2][i] || 0, duration: 0.5, stagger: { each: 0.1, from: "random" }, ease: "back.out(2.5)" },
+            { scale: 1, autoAlpha: 1, rotation: (i) => [-6,5,-3,4,-2,0,0][i] || 0, duration: 0.5, stagger: { each: 0.1, from: "random" }, ease: "back.out(2.5)" },
             "-=0.8"
         );
+
+        // ─── Scroll Animations for below-fold sections ───
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.fromTo(entry.target, 
+                        { y: 40, opacity: 0 },
+                        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+                    );
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.product-card, section h2, section .grid > div').forEach(el => {
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
 
         // ─── Physics Engine (ALL DEVICES) ───
         function initPhysics() {
@@ -459,7 +723,6 @@
                     vx = Math.max(-55, Math.min(55, (b.x-a.x)/dt*16));
                     vy = Math.max(-55, Math.min(55, (b.y-a.y)/dt*16));
                     av = vx * 0.006;
-                    // Burst particles at release point
                     const lastP = pts[pts.length-1];
                     if (Math.abs(vx) > 5 || Math.abs(vy) > 5) {
                         burstParticles(lastP.cx, lastP.cy);
