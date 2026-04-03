@@ -1,0 +1,423 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GANG - Trippy Rolling Papers</title>
+    <link rel="icon" type="image/png" href="./logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen overflow-x-hidden selection:bg-[#fb57b6] selection:text-[#f9ee1a] text-[#0d1512] font-['Inter',_sans-serif] bg-[#34f0be]" style="background-image: linear-gradient(rgba(13, 21, 18, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 21, 18, 0.08) 1px, transparent 1px); background-size: 48px 48px;">
+
+    <!-- Texture Overlays -->
+    <div class="fixed inset-0 pointer-events-none z-[9999] opacity-[0.25] mix-blend-multiply" style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E&quot;);"></div>
+    <div class="fixed inset-0 pointer-events-none z-[9998] opacity-[0.06]" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 28px, #0d1512 28px, #0d1512 30px);"></div>
+
+    <!-- ★ WHITE HEADER ★ -->
+    <nav class="w-full flex justify-between items-center px-6 py-3 lg:px-12 relative z-50 bg-white border-b-4 border-[#0d1512] shadow-[0_4px_0px_#fb57b6]">
+        <div style="visibility: hidden;" data-anim="nav" class="hover:scale-105 transition-transform cursor-pointer">
+            <img src="./logo.png" alt="GANG Logo" class="h-10 md:h-14 w-auto object-contain drop-shadow-[3px_3px_0px_#0d1512]">
+        </div>
+        <div class="hidden lg:flex items-center gap-10 text-sm font-bold uppercase tracking-wider" style="visibility: hidden;" data-anim="nav">
+            <a href="#" class="flex items-center gap-2 text-[#0d1512] hover:text-[#fb57b6] transition-colors">
+                Products <iconify-icon icon="solar:alt-arrow-down-linear" class="w-4 h-4"></iconify-icon>
+            </a>
+            <a href="#" class="text-[#0d1512] hover:text-[#fb57b6] transition-colors">Vibes</a>
+            <a href="#" class="text-[#0d1512] hover:text-[#fb57b6] transition-colors">Our Story</a>
+        </div>
+        <div class="flex items-center gap-4" style="visibility: hidden;" data-anim="nav">
+            <button class="hidden md:block text-[#0d1512] hover:text-[#fb57b6] hover:scale-110 transition-all">
+                <iconify-icon icon="solar:magnifer-linear" class="w-5 h-5"></iconify-icon>
+            </button>
+            <button class="bg-[#f9ee1a] border-3 border-[#0d1512] text-[#0d1512] px-5 py-2 text-sm font-bold uppercase tracking-wider shadow-[4px_4px_0px_#fb57b6] hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0px_#fb57b6] transition-all flex items-center gap-2">
+                Get Stash 🔥
+            </button>
+        </div>
+    </nav>
+
+    <style>
+        /* --- Pixel Text --- */
+        .pixel-text {
+            font-family: 'Press Start 2P', cursive;
+            -webkit-text-stroke: 2px #b80f8b;
+            color: transparent;
+            background: 
+                radial-gradient(circle at 5px 5px, rgba(0,0,0,0.18) 1.5px, transparent 2px) 0 0 / 12px 12px,
+                linear-gradient(to bottom, #ea580c 50%, #1e40af 50%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 
+                -1px 1px 0 #b80f8b, -2px 2px 0 #b80f8b, -3px 3px 0 #b80f8b, -4px 4px 0 #b80f8b, -5px 5px 0 #b80f8b, -6px 6px 0 #b80f8b,
+                -7px 7px 0 #06b6d4, -8px 8px 0 #06b6d4, -9px 9px 0 #06b6d4, -10px 10px 0 #06b6d4, -11px 11px 0 #06b6d4, -12px 12px 0 #06b6d4,
+                -13px 13px 0 #f97316, -14px 14px 0 #f97316, -15px 15px 0 #f97316, -16px 16px 0 #f97316, -17px 17px 0 #f97316, -18px 18px 0 #f97316,
+                -19px 19px 0 #eab308, -20px 20px 0 #eab308, -21px 21px 0 #eab308, -22px 22px 0 #eab308, -23px 23px 0 #eab308, -24px 24px 0 #eab308;
+        }
+        @media (max-width: 768px) {
+            .pixel-text {
+                -webkit-text-stroke: 1px #b80f8b;
+                background: 
+                    radial-gradient(circle at 3px 3px, rgba(0,0,0,0.15) 1px, transparent 1.5px) 0 0 / 8px 8px,
+                    linear-gradient(to bottom, #ea580c 50%, #1e40af 50%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                text-shadow: 
+                    -1px 1px 0 #b80f8b, -2px 2px 0 #b80f8b, -3px 3px 0 #b80f8b,
+                    -4px 4px 0 #06b6d4, -5px 5px 0 #06b6d4, -6px 6px 0 #06b6d4,
+                    -7px 7px 0 #f97316, -8px 8px 0 #f97316, -9px 9px 0 #f97316,
+                    -10px 10px 0 #eab308, -11px 11px 0 #eab308, -12px 12px 0 #eab308;
+            }
+        }
+
+        /* --- Marquee --- */
+        @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-track { display: flex; width: max-content; animation: marquee-scroll 18s linear infinite; }
+        .marquee-track:hover { animation-play-state: paused; }
+
+        /* --- Floating Chaos --- */
+        @keyframes float-chaos {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            25% { transform: translateY(-14px) rotate(8deg) scale(1.05); }
+            50% { transform: translateY(4px) rotate(-5deg) scale(0.97); }
+            75% { transform: translateY(-8px) rotate(12deg) scale(1.02); }
+        }
+        .float-emoji { animation: float-chaos 4s ease-in-out infinite; }
+
+        /* --- Psychedelic Pulse Ring --- */
+        @keyframes pulse-ring {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+        }
+        .psyche-ring {
+            position: absolute; border-radius: 50%; pointer-events: none;
+            border: 3px solid; animation: pulse-ring 3s ease-in-out infinite;
+        }
+
+        /* --- Rainbow Shimmer BG --- */
+        @keyframes rainbow-shift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        .rainbow-bg { animation: rainbow-shift 8s linear infinite; }
+
+        /* --- Sticker --- */
+        .sticker {
+            border: 3px solid #0d1512; box-shadow: 4px 4px 0 #0d1512;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .sticker:hover { transform: scale(1.12) rotate(-4deg) !important; box-shadow: 2px 2px 0 #0d1512; }
+
+        /* --- Cursor Glow --- */
+        #cursor-glow {
+            position: fixed; width: 200px; height: 200px; border-radius: 50%;
+            pointer-events: none;
+            background: radial-gradient(circle, rgba(251,87,182,0.3) 0%, rgba(249,238,26,0.1) 40%, transparent 70%);
+            mix-blend-mode: screen; z-index: 9990;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease; opacity: 0;
+        }
+
+        /* --- Product (ALWAYS visible shadow) --- */
+        .product-image {
+            cursor: grab; user-select: none; -webkit-user-drag: none;
+            filter: drop-shadow(-5px 0 0 rgba(251,87,182,0.5)) drop-shadow(5px 0 0 rgba(6,182,212,0.5)) drop-shadow(20px 20px 0 rgba(13,21,18,0.2));
+            transition: filter 0.2s ease;
+        }
+        .product-image.dragging { cursor: grabbing; }
+        .product-image:hover {
+            filter: drop-shadow(-6px 0 0 #fb57b6) drop-shadow(6px 0 0 #06b6d4) drop-shadow(24px 24px 0 rgba(13,21,18,0.3));
+        }
+
+        /* --- Grab Label --- */
+        .grab-label {
+            position: absolute; top: -44px; left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 0.7rem; text-transform: uppercase;
+            letter-spacing: 0.15em; color: #0d1512;
+            background: #f9ee1a; border: 3px solid #0d1512;
+            padding: 5px 16px; border-radius: 999px;
+            white-space: nowrap; pointer-events: none;
+            box-shadow: 3px 3px 0 #fb57b6;
+            animation: float-chaos 2.5s ease-in-out infinite;
+        }
+
+        /* --- Trippy Spiral --- */
+        @keyframes spin-slow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes spin-reverse { 0% { transform: rotate(360deg); } 100% { transform: rotate(0deg); } }
+
+        /* --- Star Burst on Throw --- */
+        @keyframes star-burst {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            100% { transform: scale(2.5) rotate(180deg); opacity: 0; }
+        }
+        .star-burst {
+            position: absolute; font-size: 2rem; pointer-events: none;
+            animation: star-burst 0.6s ease-out forwards;
+        }
+    </style>
+
+    <div id="cursor-glow"></div>
+
+    <!-- ★ MARQUEE ★ -->
+    <div class="w-full bg-[#0d1512] border-y-3 border-[#fb57b6] overflow-hidden py-2 z-40 relative" style="visibility: hidden;" data-anim="hero">
+        <div class="marquee-track">
+            <span class="text-[#f9ee1a] font-['Archivo_Black',_sans-serif] text-sm md:text-base uppercase tracking-[0.25em] whitespace-nowrap px-6">
+                🔥 100% ORGANIC HEMP &nbsp;✦&nbsp; SLOW BURN &nbsp;✦&nbsp; NO HARSH ASH &nbsp;✦&nbsp; STAY TRIPPY &nbsp;✦&nbsp; PURE FLAVOUR &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp; BURN PURE &nbsp;✦&nbsp;
+            </span>
+            <span class="text-[#f9ee1a] font-['Archivo_Black',_sans-serif] text-sm md:text-base uppercase tracking-[0.25em] whitespace-nowrap px-6">
+                🔥 100% ORGANIC HEMP &nbsp;✦&nbsp; SLOW BURN &nbsp;✦&nbsp; NO HARSH ASH &nbsp;✦&nbsp; STAY TRIPPY &nbsp;✦&nbsp; PURE FLAVOUR &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp; BURN PURE &nbsp;✦&nbsp;
+            </span>
+        </div>
+    </div>
+
+    <!-- ★ HERO (viewport-fitted) ★ -->
+    <main id="hero-main" class="relative w-full flex flex-col items-center justify-center overflow-hidden" style="height: calc(100vh - 120px);">
+        
+        <!-- Psychedelic Pulse Rings (Background) -->
+        <div class="absolute inset-0 pointer-events-none z-[3] hidden md:block" style="visibility:hidden" data-anim="hero">
+            <div class="psyche-ring" style="top:50%;left:50%;width:300px;height:300px;border-color:rgba(251,87,182,0.3);animation-delay:0s"></div>
+            <div class="psyche-ring" style="top:50%;left:50%;width:500px;height:500px;border-color:rgba(249,238,26,0.25);animation-delay:0.8s"></div>
+            <div class="psyche-ring" style="top:50%;left:50%;width:700px;height:700px;border-color:rgba(6,182,212,0.2);animation-delay:1.6s"></div>
+            <div class="psyche-ring" style="top:50%;left:50%;width:900px;height:900px;border-color:rgba(52,240,190,0.15);animation-delay:2.4s"></div>
+        </div>
+
+        <!-- Trippy Spiral (Background) -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[2] opacity-[0.07] hidden md:block" style="animation: spin-slow 30s linear infinite;">
+            <svg width="800" height="800" viewBox="0 0 200 200">
+                <path d="M100 10 C140 10 190 60 190 100 C190 140 140 190 100 190 C60 190 10 140 10 100 C10 60 60 10 100 10 C130 30 170 70 170 100 C170 130 130 170 100 170 C70 170 30 130 30 100 C30 70 70 30 100 30 C120 50 150 80 150 100 C150 120 120 150 100 150 C80 150 50 120 50 100 C50 80 80 50 100 50" fill="none" stroke="#fb57b6" stroke-width="1.2"/>
+            </svg>
+        </div>
+
+        <!-- Floating Emojis (more of them, wilder) -->
+        <div class="absolute inset-0 pointer-events-none z-[5] hidden md:block" style="visibility:hidden" data-anim="hero">
+            <span class="float-emoji absolute top-[6%] left-[6%] text-4xl" style="animation-delay:0s">🍃</span>
+            <span class="float-emoji absolute top-[10%] right-[10%] text-3xl" style="animation-delay:0.5s">💨</span>
+            <span class="float-emoji absolute bottom-[22%] left-[4%] text-4xl" style="animation-delay:1.2s">⚡</span>
+            <span class="float-emoji absolute top-[35%] right-[4%] text-2xl" style="animation-delay:0.3s">🌈</span>
+            <span class="float-emoji absolute bottom-[12%] right-[15%] text-3xl" style="animation-delay:1.8s">✨</span>
+            <span class="float-emoji absolute top-[55%] left-[12%] text-2xl" style="animation-delay:0.9s">🍀</span>
+            <span class="float-emoji absolute bottom-[30%] left-[35%] text-xl" style="animation-delay:0.4s">💎</span>
+            <span class="float-emoji absolute top-[20%] left-[25%] text-3xl" style="animation-delay:1.5s">🌀</span>
+            <span class="float-emoji absolute bottom-[8%] left-[50%] text-2xl" style="animation-delay:2.2s">🫧</span>
+            <span class="float-emoji absolute top-[70%] right-[8%] text-3xl" style="animation-delay:0.7s">🪬</span>
+            <span class="float-emoji absolute top-[4%] left-[48%] text-2xl" style="animation-delay:1.1s">👁️</span>
+            <span class="float-emoji absolute bottom-[18%] right-[35%] text-xl" style="animation-delay:2.5s">🔮</span>
+        </div>
+
+        <!-- Background Headline -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 xl:gap-12 pointer-events-none z-10 w-full" style="visibility:hidden" data-anim="hero">
+            <h1 class="pixel-text text-[7vw] xl:text-[7rem] uppercase leading-normal text-center w-full">BURN PURE</h1>
+            <h1 class="pixel-text text-[5.5vw] xl:text-[5.5rem] uppercase leading-normal text-center w-full whitespace-nowrap">STAY TRIPPY</h1>
+        </div>
+
+        <!-- ★ INTERACTIVE PRODUCT ★ -->
+        <div id="product-wrapper" class="relative z-20 flex items-center justify-center w-full pointer-events-none px-4 bg-transparent">
+            <div id="product-physics" class="pointer-events-auto relative" style="visibility:hidden; width:300px;">
+                <span class="grab-label hidden md:block">🫳 GRAB &amp; THROW ME</span>
+                <img id="product-img" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7b4959ae-3afe-484a-b198-1643b95c503d_1600w.png" alt="Gang Premium Rolling Papers" class="product-image w-full h-auto object-contain" draggable="false">
+            </div>
+        </div>
+
+        <!-- Stickers -->
+        <div class="sticker absolute top-[10%] left-[3%] xl:left-[5%] z-30 hidden lg:flex items-center gap-2 bg-[#f9ee1a] px-4 py-2 rounded-full rotate-[-6deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-xl">🌿</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-[#0d1512] tracking-wider">100% Organic</span>
+        </div>
+        <div class="sticker absolute top-[8%] right-[4%] xl:right-[6%] z-30 hidden lg:flex items-center gap-2 bg-[#fb57b6] px-4 py-2 rounded-full rotate-[5deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-xl">🔥</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-white tracking-wider">No Cap</span>
+        </div>
+        <div class="sticker absolute top-[42%] left-[2%] z-30 hidden xl:flex items-center gap-2 bg-[#06b6d4] px-4 py-2 rounded-full rotate-[-3deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-xl">🕐</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-[#0d1512] tracking-wider">Slow Burn</span>
+        </div>
+        <div class="sticker absolute bottom-[15%] left-[6%] z-30 hidden xl:flex items-center gap-2 bg-[#34f0be] px-4 py-2 rounded-full rotate-[4deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-xl">🧬</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-[#0d1512] tracking-wider">Unbleached</span>
+        </div>
+        <div class="sticker absolute top-[38%] right-[3%] z-30 hidden xl:flex items-center gap-2 bg-white px-4 py-2 rounded-full rotate-[-2deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-xl">👅</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-[#0d1512] tracking-wider">Pure Flavor</span>
+        </div>
+
+        <!-- Feature Card -->
+        <div class="absolute bottom-[6%] right-[3%] xl:right-[5%] z-30 hidden lg:block max-w-[260px]" style="visibility:hidden" data-anim="scatter">
+            <div class="bg-[#0d1512]/85 backdrop-blur-xl border-3 border-[#fb57b6] p-4 shadow-[5px_5px_0px_#f9ee1a] rounded-xl">
+                <p class="text-xs font-semibold leading-relaxed text-white text-center">
+                    100% organic, unbleached hemp engineered for a slower, smoother burn. No runs, no harsh ash—just pure flavor in every hit. 💯
+                </p>
+            </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="w-full flex lg:hidden bg-[#0d1512] flex-col items-center gap-4 pb-10 px-6 pt-6 z-30 relative shrink-0">
+            <p class="text-sm text-center font-medium leading-relaxed text-white max-w-xs">
+                100% organic hemp for a slower, smoother burn. No harsh ash—just pure flavor. 💯
+            </p>
+            <button class="w-full max-w-xs hover:-translate-y-1 hover:shadow-[3px_3px_0px_#fb57b6] transition-all flex text-sm font-bold text-[#0d1512] bg-[#f9ee1a] border-[#0d1512] border-3 py-3 px-5 gap-2 justify-center items-center rounded-full uppercase tracking-wider">
+                Secure Your Stash 🔥
+            </button>
+        </div>
+    </main>
+
+    <!-- Particle container for throw bursts -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-[60]"></div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // ─── Cursor Glow ───
+        const glow = document.getElementById("cursor-glow");
+        if (glow && window.innerWidth > 768) {
+            glow.style.opacity = "1";
+            document.addEventListener("mousemove", (e) => {
+                glow.style.left = e.clientX + "px";
+                glow.style.top = e.clientY + "px";
+            });
+        }
+
+        // ─── Particle Burst on throw ───
+        const particleBox = document.getElementById("particles");
+        function burstParticles(cx, cy) {
+            const emojis = ["⚡","✨","🔥","💨","🌀","💎","🫧","🪬","👁️","🍃"];
+            for (let i = 0; i < 8; i++) {
+                const span = document.createElement("span");
+                span.className = "star-burst";
+                span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                span.style.left = (cx + (Math.random()-0.5)*80) + "px";
+                span.style.top = (cy + (Math.random()-0.5)*80) + "px";
+                particleBox.appendChild(span);
+                setTimeout(() => span.remove(), 700);
+            }
+        }
+
+        // ─── GSAP Entrance ───
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+        tl.fromTo("[data-anim='nav']", 
+            { y: -30, autoAlpha: 0 }, 
+            { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.1 }
+        )
+        .fromTo("[data-anim='hero']", 
+            { y: 30, autoAlpha: 0 }, 
+            { y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.06, ease: "power4.out" },
+            "-=0.3"
+        )
+        .fromTo("#product-physics", 
+            { y: 160, autoAlpha: 0, rotation: -60, scale: 0.6 }, 
+            { y: 0, autoAlpha: 1, rotation: -45, scale: 1, duration: 1.6, ease: "elastic.out(1, 0.5)",
+              onComplete: initPhysics }, 
+            "-=0.5"
+        )
+        .fromTo("[data-anim='scatter']",
+            { scale: 0, autoAlpha: 0, rotation: () => gsap.utils.random(-25, 25) },
+            { scale: 1, autoAlpha: 1, rotation: (i) => [-6,5,-3,4,-2][i] || 0, duration: 0.5, stagger: { each: 0.1, from: "random" }, ease: "back.out(2.5)" },
+            "-=0.8"
+        );
+
+        // ─── Physics Engine ───
+        function initPhysics() {
+            if (window.innerWidth < 768) return;
+
+            const el = document.getElementById("product-physics");
+            const hero = document.getElementById("hero-main");
+            const label = el.querySelector(".grab-label");
+
+            gsap.set(el, { clearProps: "all" });
+            el.style.visibility = "visible";
+            el.style.position = "absolute";
+            el.style.willChange = "transform";
+            el.style.zIndex = "20";
+
+            const elRect = el.getBoundingClientRect();
+            let W, H;
+            function measure() {
+                const r = hero.getBoundingClientRect();
+                W = r.width; H = r.height;
+            }
+            measure();
+
+            const imgW = elRect.width, imgH = elRect.height;
+            let x = W/2, y = H/2 - 20;
+            let vx = 0, vy = 0;
+            let angle = -45 * Math.PI / 180, av = 0;
+
+            const G = 0.38, FRIC = 0.989, BOUNCE = 0.52, AFRIC = 0.976, PAD = 8;
+            let drag = false, ox = 0, oy = 0, hist = [];
+
+            function render() {
+                el.style.transform = `translate(${x - imgW/2}px, ${y - imgH/2}px) rotate(${angle*180/Math.PI}deg)`;
+            }
+
+            function tick() {
+                if (!drag) {
+                    vy += G; vx *= FRIC; vy *= FRIC; av *= AFRIC;
+                    x += vx; y += vy; angle += av;
+                    const hw = imgW*0.32, hh = imgH*0.32;
+                    if (y+hh > H-PAD) { y = H-PAD-hh; vy *= -BOUNCE; av += vx*0.002; vx *= 0.88; }
+                    if (y-hh < PAD) { y = PAD+hh; vy *= -BOUNCE; }
+                    if (x+hw > W-PAD) { x = W-PAD-hw; vx *= -BOUNCE; av -= vy*0.001; }
+                    if (x-hw < PAD) { x = PAD+hw; vx *= -BOUNCE; av += vy*0.001; }
+                }
+                render();
+                requestAnimationFrame(tick);
+            }
+
+            function pos(e) {
+                const c = e.touches ? e.touches[0] : e;
+                const r = hero.getBoundingClientRect();
+                return { x: c.clientX - r.left, y: c.clientY - r.top, cx: c.clientX, cy: c.clientY };
+            }
+
+            function onDown(e) {
+                e.preventDefault(); drag = true;
+                el.querySelector(".product-image").classList.add("dragging");
+                if (label) label.style.opacity = "0";
+                const p = pos(e);
+                ox = p.x - x; oy = p.y - y;
+                vx = 0; vy = 0; av = 0;
+                hist = [{ ...p, t: Date.now() }];
+            }
+            function onMove(e) {
+                if (!drag) return; e.preventDefault();
+                const p = pos(e);
+                x = p.x - ox; y = p.y - oy;
+                const now = Date.now();
+                hist.push({ ...p, t: now });
+                hist = hist.filter(h => now - h.t < 100);
+                av = (p.x - (hist[0]?.x || p.x)) * 0.002;
+            }
+            function onUp(e) {
+                if (!drag) return; drag = false;
+                el.querySelector(".product-image").classList.remove("dragging");
+                const now = Date.now();
+                const pts = hist.filter(h => now - h.t < 100);
+                if (pts.length >= 2) {
+                    const a = pts[0], b = pts[pts.length-1];
+                    const dt = (b.t - a.t) || 1;
+                    vx = Math.max(-55, Math.min(55, (b.x-a.x)/dt*16));
+                    vy = Math.max(-55, Math.min(55, (b.y-a.y)/dt*16));
+                    av = vx * 0.006;
+                    // Burst particles at release point
+                    const lastP = pts[pts.length-1];
+                    if (Math.abs(vx) > 5 || Math.abs(vy) > 5) {
+                        burstParticles(lastP.cx, lastP.cy);
+                    }
+                }
+            }
+
+            el.addEventListener("mousedown", onDown);
+            el.addEventListener("touchstart", onDown, { passive: false });
+            document.addEventListener("mousemove", onMove);
+            document.addEventListener("touchmove", onMove, { passive: false });
+            document.addEventListener("mouseup", onUp);
+            document.addEventListener("touchend", onUp);
+
+            render(); tick();
+            window.addEventListener("resize", () => { measure(); if(x>W) x=W/2; if(y>H) y=H/2; });
+        }
+    });
+    </script>
+
+</body></html>
