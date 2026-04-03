@@ -173,7 +173,7 @@
     </div>
 
     <!-- ★ HERO (viewport-fitted) ★ -->
-    <main id="hero-main" class="relative w-full flex flex-col items-center justify-center overflow-hidden" style="height: calc(100vh - 120px);">
+    <main id="hero-main" class="relative w-full flex flex-col items-center justify-center overflow-hidden" style="height: calc(100svh - 100px);">
         
         <!-- Psychedelic Pulse Rings (Background) -->
         <div class="absolute inset-0 pointer-events-none z-[3] hidden md:block" style="visibility:hidden" data-anim="hero">
@@ -279,56 +279,56 @@
         </div>
 
         <!-- Background Headline -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 xl:gap-12 pointer-events-none z-10 w-full" style="visibility:hidden" data-anim="hero">
-            <h1 class="pixel-text text-[7vw] xl:text-[7rem] uppercase leading-normal text-center w-full">BURN PURE</h1>
-            <h1 class="pixel-text text-[5.5vw] xl:text-[5.5rem] uppercase leading-normal text-center w-full whitespace-nowrap">STAY TRIPPY</h1>
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 md:gap-6 xl:gap-12 pointer-events-none z-10 w-full px-2" style="visibility:hidden" data-anim="hero">
+            <h1 class="pixel-text text-[10vw] md:text-[7vw] xl:text-[7rem] uppercase leading-normal text-center w-full">BURN PURE</h1>
+            <h1 class="pixel-text text-[8vw] md:text-[5.5vw] xl:text-[5.5rem] uppercase leading-normal text-center w-full whitespace-nowrap">STAY TRIPPY</h1>
         </div>
 
         <!-- ★ INTERACTIVE PRODUCT ★ -->
         <div id="product-wrapper" class="relative z-20 flex items-center justify-center w-full pointer-events-none px-4 bg-transparent">
-            <div id="product-physics" class="pointer-events-auto relative" style="visibility:hidden; width:300px;">
+            <div id="product-physics" class="pointer-events-auto relative w-[200px] md:w-[260px] lg:w-[300px]" style="visibility:hidden;">
                 <span class="grab-label hidden md:block">🫳 GRAB &amp; THROW ME</span>
                 <img id="product-img" src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7b4959ae-3afe-484a-b198-1643b95c503d_1600w.png" alt="Gang Premium Rolling Papers" class="product-image w-full h-auto object-contain" draggable="false">
             </div>
         </div>
 
-        <!-- Stickers -->
-        <div class="sticker absolute top-[10%] left-[3%] xl:left-[5%] z-30 hidden lg:flex items-center gap-2 bg-[#f9ee1a] px-4 py-2 rounded-full rotate-[-6deg]" style="visibility:hidden" data-anim="scatter">
-            <span class="text-xl">🌿</span>
-            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-[#0d1512] tracking-wider">100% Organic</span>
+        <!-- Stickers (visible from md/tablet up) -->
+        <div class="sticker absolute top-[10%] left-[3%] xl:left-[5%] z-30 hidden md:flex items-center gap-2 bg-[#f9ee1a] px-3 md:px-4 py-1.5 md:py-2 rounded-full rotate-[-6deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-lg md:text-xl">🌿</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-[10px] md:text-xs uppercase text-[#0d1512] tracking-wider">100% Organic</span>
         </div>
-        <div class="sticker absolute top-[8%] right-[4%] xl:right-[6%] z-30 hidden lg:flex items-center gap-2 bg-[#fb57b6] px-4 py-2 rounded-full rotate-[5deg]" style="visibility:hidden" data-anim="scatter">
-            <span class="text-xl">🔥</span>
-            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-white tracking-wider">No Cap</span>
+        <div class="sticker absolute top-[8%] right-[4%] xl:right-[6%] z-30 hidden md:flex items-center gap-2 bg-[#fb57b6] px-3 md:px-4 py-1.5 md:py-2 rounded-full rotate-[5deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-lg md:text-xl">🔥</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-[10px] md:text-xs uppercase text-white tracking-wider">No Cap</span>
         </div>
-        <div class="sticker absolute top-[42%] left-[2%] z-30 hidden xl:flex items-center gap-2 bg-[#06b6d4] px-4 py-2 rounded-full rotate-[-3deg]" style="visibility:hidden" data-anim="scatter">
-            <span class="text-xl">🕐</span>
-            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-[#0d1512] tracking-wider">Slow Burn</span>
+        <div class="sticker absolute top-[42%] left-[2%] z-30 hidden lg:flex items-center gap-2 bg-[#06b6d4] px-3 md:px-4 py-1.5 md:py-2 rounded-full rotate-[-3deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-lg md:text-xl">🕐</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-[10px] md:text-xs uppercase text-[#0d1512] tracking-wider">Slow Burn</span>
         </div>
-        <div class="sticker absolute bottom-[15%] left-[6%] z-30 hidden xl:flex items-center gap-2 bg-[#34f0be] px-4 py-2 rounded-full rotate-[4deg]" style="visibility:hidden" data-anim="scatter">
-            <span class="text-xl">🧬</span>
-            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-[#0d1512] tracking-wider">Unbleached</span>
+        <div class="sticker absolute bottom-[15%] left-[6%] z-30 hidden lg:flex items-center gap-2 bg-[#34f0be] px-3 md:px-4 py-1.5 md:py-2 rounded-full rotate-[4deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-lg md:text-xl">🧬</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-[10px] md:text-xs uppercase text-[#0d1512] tracking-wider">Unbleached</span>
         </div>
-        <div class="sticker absolute top-[38%] right-[3%] z-30 hidden xl:flex items-center gap-2 bg-white px-4 py-2 rounded-full rotate-[-2deg]" style="visibility:hidden" data-anim="scatter">
-            <span class="text-xl">👅</span>
-            <span class="font-['Archivo_Black',_sans-serif] text-xs uppercase text-[#0d1512] tracking-wider">Pure Flavor</span>
+        <div class="sticker absolute top-[38%] right-[3%] z-30 hidden lg:flex items-center gap-2 bg-white px-3 md:px-4 py-1.5 md:py-2 rounded-full rotate-[-2deg]" style="visibility:hidden" data-anim="scatter">
+            <span class="text-lg md:text-xl">👅</span>
+            <span class="font-['Archivo_Black',_sans-serif] text-[10px] md:text-xs uppercase text-[#0d1512] tracking-wider">Pure Flavor</span>
         </div>
 
-        <!-- Feature Card -->
-        <div class="absolute bottom-[6%] right-[3%] xl:right-[5%] z-30 hidden lg:block max-w-[260px]" style="visibility:hidden" data-anim="scatter">
-            <div class="bg-[#0d1512]/85 backdrop-blur-xl border-3 border-[#fb57b6] p-4 shadow-[5px_5px_0px_#f9ee1a] rounded-xl">
-                <p class="text-xs font-semibold leading-relaxed text-white text-center">
-                    100% organic, unbleached hemp engineered for a slower, smoother burn. No runs, no harsh ash—just pure flavor in every hit. 💯
+        <!-- Feature Card (tablet + desktop) -->
+        <div class="absolute bottom-[6%] right-[3%] xl:right-[5%] z-30 hidden md:block max-w-[220px] lg:max-w-[260px]" style="visibility:hidden" data-anim="scatter">
+            <div class="bg-[#0d1512]/85 backdrop-blur-xl border-3 border-[#fb57b6] p-3 md:p-4 shadow-[5px_5px_0px_#f9ee1a] rounded-xl">
+                <p class="text-[10px] md:text-xs font-semibold leading-relaxed text-white text-center">
+                    100% organic, unbleached hemp for a slower, smoother burn. No harsh ash—just pure flavor. 💯
                 </p>
             </div>
         </div>
 
-        <!-- Mobile -->
-        <div class="w-full flex lg:hidden bg-[#0d1512] flex-col items-center gap-4 pb-10 px-6 pt-6 z-30 relative shrink-0">
-            <p class="text-sm text-center font-medium leading-relaxed text-white max-w-xs">
+        <!-- Mobile + Small Tablet CTA -->
+        <div class="w-full flex md:hidden bg-[#0d1512] flex-col items-center gap-4 pb-8 px-6 pt-5 z-30 relative shrink-0">
+            <p class="text-xs sm:text-sm text-center font-medium leading-relaxed text-white max-w-xs">
                 100% organic hemp for a slower, smoother burn. No harsh ash—just pure flavor. 💯
             </p>
-            <button class="w-full max-w-xs hover:-translate-y-1 hover:shadow-[3px_3px_0px_#fb57b6] transition-all flex text-sm font-bold text-[#0d1512] bg-[#f9ee1a] border-[#0d1512] border-3 py-3 px-5 gap-2 justify-center items-center rounded-full uppercase tracking-wider">
+            <button class="w-full max-w-[280px] hover:-translate-y-1 hover:shadow-[3px_3px_0px_#fb57b6] transition-all flex text-xs sm:text-sm font-bold text-[#0d1512] bg-[#f9ee1a] border-[#0d1512] border-3 py-3 px-5 gap-2 justify-center items-center rounded-full uppercase tracking-wider">
                 Secure Your Stash 🔥
             </button>
         </div>
