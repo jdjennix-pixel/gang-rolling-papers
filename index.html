@@ -30,11 +30,43 @@
             <button class="hidden md:block text-[#0d1512] hover:text-[#fb57b6] hover:scale-110 transition-all">
                 <iconify-icon icon="solar:magnifer-linear" class="w-5 h-5"></iconify-icon>
             </button>
-            <button class="bg-[#f9ee1a] border-3 border-[#0d1512] text-[#0d1512] px-5 py-2 text-sm font-bold uppercase tracking-wider shadow-[4px_4px_0px_#fb57b6] hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0px_#fb57b6] transition-all flex items-center gap-2">
+            <button class="hidden sm:flex bg-[#f9ee1a] border-3 border-[#0d1512] text-[#0d1512] px-5 py-2 text-sm font-bold uppercase tracking-wider shadow-[4px_4px_0px_#fb57b6] hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0px_#fb57b6] transition-all items-center gap-2">
                 Get Stash 🔥
+            </button>
+            <!-- Hamburger -->
+            <button id="hamburger-btn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] group" onclick="document.getElementById('mobile-menu').classList.toggle('translate-y-[-100%]')">
+                <span class="w-6 h-[3px] bg-[#0d1512] rounded-full group-hover:bg-[#fb57b6] transition-colors"></span>
+                <span class="w-6 h-[3px] bg-[#0d1512] rounded-full group-hover:bg-[#fb57b6] transition-colors"></span>
+                <span class="w-4 h-[3px] bg-[#0d1512] rounded-full group-hover:bg-[#fb57b6] transition-colors"></span>
             </button>
         </div>
     </nav>
+
+    <!-- ★ MOBILE MENU OVERLAY ★ -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-[#0d1512] flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-in-out translate-y-[-100%] lg:hidden">
+        <button class="absolute top-5 right-6 text-white text-3xl hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">✕</button>
+        <img src="./logo.png" alt="GANG" class="h-14 mb-4 drop-shadow-[3px_3px_0px_#fb57b6]">
+        <a href="#products" class="text-[#f9ee1a] font-['Archivo_Black',_sans-serif] text-2xl uppercase tracking-wider hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">Products</a>
+        <a href="#" class="text-[#34f0be] font-['Archivo_Black',_sans-serif] text-2xl uppercase tracking-wider hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">Vibes</a>
+        <a href="#" class="text-white font-['Archivo_Black',_sans-serif] text-2xl uppercase tracking-wider hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">Our Story</a>
+        <a href="#" class="text-white font-['Archivo_Black',_sans-serif] text-2xl uppercase tracking-wider hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">FAQ</a>
+        <div class="mt-4">
+            <button class="bg-[#f9ee1a] border-3 border-white text-[#0d1512] px-10 py-3 font-['Archivo_Black',_sans-serif] text-lg uppercase tracking-wider rounded-full shadow-[5px_5px_0px_#fb57b6] hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_#fb57b6] transition-all" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">
+                Get Stash 🔥
+            </button>
+        </div>
+        <div class="flex gap-4 mt-4">
+            <a href="#" class="w-10 h-10 bg-[#34f0be] border-2 border-white rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors">
+                <iconify-icon icon="mdi:instagram" width="20"></iconify-icon>
+            </a>
+            <a href="#" class="w-10 h-10 bg-[#34f0be] border-2 border-white rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors">
+                <iconify-icon icon="mdi:twitter" width="20"></iconify-icon>
+            </a>
+            <a href="#" class="w-10 h-10 bg-[#34f0be] border-2 border-white rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors">
+                <iconify-icon icon="mdi:tiktok" width="20"></iconify-icon>
+            </a>
+        </div>
+    </div>
 
     <style>
         /* --- Pixel Text --- */
@@ -73,6 +105,16 @@
         @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .marquee-track { display: flex; width: max-content; animation: marquee-scroll 18s linear infinite; }
         .marquee-track:hover { animation-play-state: paused; }
+        .marquee-track-slow { display: flex; width: max-content; animation: marquee-scroll 25s linear infinite; }
+
+        /* Wavy Text */
+        @keyframes wavy {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(1deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(8px) rotate(-1deg); }
+        }
+        .wavy-char { display: inline-block; animation: wavy 2s ease-in-out infinite; }
 
         /* --- Floating Chaos --- */
         @keyframes float-chaos {
@@ -333,20 +375,49 @@
     </main>
 
     <!-- ════════════════════════════════════════ -->
+    <!--       WAVY MARQUEE DIVIDER              -->
+    <!-- ════════════════════════════════════════ -->
+    <div class="w-full bg-[#0d1512] border-y-4 border-[#fb57b6] overflow-hidden py-4 md:py-6 relative" style="transform: rotate(-1deg) scale(1.02);">
+        <div class="marquee-track-slow">
+            <span class="font-['Archivo_Black',_sans-serif] text-2xl md:text-4xl lg:text-5xl uppercase tracking-[0.15em] whitespace-nowrap px-8">
+                <span class="wavy-char text-[#34f0be]" style="animation-delay:0s">★</span>
+                <span class="text-[#f9ee1a]"> OUR PRODUCTS </span>
+                <span class="wavy-char text-[#fb57b6]" style="animation-delay:0.1s">✦</span>
+                <span class="text-[#34f0be]"> ROLL DIFFERENT </span>
+                <span class="wavy-char text-[#f9ee1a]" style="animation-delay:0.2s">✦</span>
+                <span class="text-[#fb57b6]"> PREMIUM HEMP </span>
+                <span class="wavy-char text-[#06b6d4]" style="animation-delay:0.3s">✦</span>
+                <span class="text-[#f9ee1a]"> GANG GANG </span>
+                <span class="wavy-char text-[#34f0be]" style="animation-delay:0.4s">★</span>
+                <span class="text-[#fb57b6]"> STAY TRIPPY </span>
+                <span class="wavy-char text-[#f9ee1a]" style="animation-delay:0.5s">✦</span>
+                <span class="text-[#06b6d4]"> BURN PURE </span>
+                <span class="wavy-char text-[#fb57b6]" style="animation-delay:0.6s">✦</span>
+                <span class="text-[#34f0be]"> NO CAP </span>
+            </span>
+            <span class="font-['Archivo_Black',_sans-serif] text-2xl md:text-4xl lg:text-5xl uppercase tracking-[0.15em] whitespace-nowrap px-8">
+                <span class="wavy-char text-[#34f0be]" style="animation-delay:0.7s">★</span>
+                <span class="text-[#f9ee1a]"> OUR PRODUCTS </span>
+                <span class="wavy-char text-[#fb57b6]" style="animation-delay:0.8s">✦</span>
+                <span class="text-[#34f0be]"> ROLL DIFFERENT </span>
+                <span class="wavy-char text-[#f9ee1a]" style="animation-delay:0.9s">✦</span>
+                <span class="text-[#fb57b6]"> PREMIUM HEMP </span>
+                <span class="wavy-char text-[#06b6d4]" style="animation-delay:1.0s">✦</span>
+                <span class="text-[#f9ee1a]"> GANG GANG </span>
+                <span class="wavy-char text-[#34f0be]" style="animation-delay:1.1s">★</span>
+                <span class="text-[#fb57b6]"> STAY TRIPPY </span>
+                <span class="wavy-char text-[#f9ee1a]" style="animation-delay:1.2s">✦</span>
+                <span class="text-[#06b6d4]"> BURN PURE </span>
+                <span class="wavy-char text-[#fb57b6]" style="animation-delay:1.3s">✦</span>
+                <span class="text-[#34f0be]"> NO CAP </span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════ -->
     <!--          PRODUCTS SHOWCASE              -->
     <!-- ════════════════════════════════════════ -->
-    <section id="products" class="relative w-full bg-white border-t-4 border-[#0d1512] py-16 md:py-24 overflow-hidden">
-        <!-- Marquee divider -->
-        <div class="w-full bg-[#0d1512] border-y-3 border-[#fb57b6] overflow-hidden py-2 mb-12 md:mb-16">
-            <div class="marquee-track">
-                <span class="text-[#34f0be] font-['Archivo_Black',_sans-serif] text-sm md:text-base uppercase tracking-[0.25em] whitespace-nowrap px-6">
-                    ★ OUR PRODUCTS &nbsp;✦&nbsp; ROLL DIFFERENT &nbsp;✦&nbsp; PREMIUM HEMP &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp; OUR PRODUCTS &nbsp;✦&nbsp; ROLL DIFFERENT &nbsp;✦&nbsp; PREMIUM HEMP &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp;
-                </span>
-                <span class="text-[#34f0be] font-['Archivo_Black',_sans-serif] text-sm md:text-base uppercase tracking-[0.25em] whitespace-nowrap px-6">
-                    ★ OUR PRODUCTS &nbsp;✦&nbsp; ROLL DIFFERENT &nbsp;✦&nbsp; PREMIUM HEMP &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp; OUR PRODUCTS &nbsp;✦&nbsp; ROLL DIFFERENT &nbsp;✦&nbsp; PREMIUM HEMP &nbsp;✦&nbsp; GANG GANG &nbsp;✦&nbsp;
-                </span>
-            </div>
-        </div>
+    <section id="products" class="relative w-full bg-white py-16 md:py-24 overflow-hidden">
 
         <div class="max-w-6xl mx-auto px-6 md:px-12">
             <!-- Section Header -->
@@ -678,7 +749,7 @@
                 if (!drag) {
                     vy += G; vx *= FRIC; vy *= FRIC; av *= AFRIC;
                     x += vx; y += vy; angle += av;
-                    const hw = imgW*0.32, hh = imgH*0.32;
+                    const hw = imgW*0.2, hh = imgH*0.2;
                     if (y+hh > H-PAD) { y = H-PAD-hh; vy *= -BOUNCE; av += vx*0.002; vx *= 0.88; }
                     if (y-hh < PAD) { y = PAD+hh; vy *= -BOUNCE; }
                     if (x+hw > W-PAD) { x = W-PAD-hw; vx *= -BOUNCE; av -= vy*0.001; }
