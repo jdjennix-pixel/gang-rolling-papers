@@ -1,0 +1,526 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GANG - Trippy Rolling Papers | 100% Organic Hemp</title>
+    <meta name="description" content="GANG Rolling Papers — 100% organic, unbleached hemp rolling papers and pre-rolled cones. Slow burn, pure flavor, no harsh ash. Roll different.">
+    <link rel="icon" type="image/png" href="./logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen overflow-x-hidden selection:bg-[#fb57b6] selection:text-[#f9ee1a] text-[#0d1512] font-['Inter',_sans-serif] bg-[#34f0be]" style="background-image: linear-gradient(rgba(13, 21, 18, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 21, 18, 0.08) 1px, transparent 1px); background-size: 48px 48px;">
+
+    <!-- Texture Overlays -->
+    <div class="fixed inset-0 pointer-events-none z-[9999] opacity-[0.25] mix-blend-multiply" style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E&quot;);"></div>
+    <div class="fixed inset-0 pointer-events-none z-[9998] opacity-[0.06]" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 28px, #0d1512 28px, #0d1512 30px);"></div>
+
+    <!-- ★ WHITE HEADER ★ -->
+    <nav class="w-full flex justify-between items-center px-6 py-3 lg:px-12 relative z-50 bg-white border-b-4 border-[#0d1512] shadow-[0_4px_0px_#fb57b6]">
+        <div style="visibility: hidden;" data-anim="nav" class="hover:scale-105 transition-transform cursor-pointer">
+            <a href="index.html">
+                <img src="./logo.png" alt="GANG Logo" class="h-10 md:h-14 w-auto object-contain drop-shadow-[3px_3px_0px_#0d1512]">
+            </a>
+        </div>
+        <div class="hidden lg:flex items-center gap-10 text-sm font-bold uppercase tracking-wider" style="visibility: hidden;" data-anim="nav">
+            <a href="index.html#products" class="flex items-center gap-2 text-[#0d1512] hover:text-[#fb57b6] transition-colors">
+                Products <iconify-icon icon="solar:alt-arrow-down-linear" class="w-4 h-4"></iconify-icon>
+            </a>
+            <a href="index.html" class="text-[#0d1512] hover:text-[#fb57b6] transition-colors">Vibes</a>
+            <a href="#" class="text-[#0d1512] hover:text-[#fb57b6] transition-colors">Our Story</a>
+        </div>
+        <div class="flex items-center gap-4" style="visibility: hidden;" data-anim="nav">
+            <button class="hidden md:block text-[#0d1512] hover:text-[#fb57b6] hover:scale-110 transition-all">
+                <iconify-icon icon="solar:magnifer-linear" class="w-5 h-5"></iconify-icon>
+            </button>
+            <button class="hidden sm:flex bg-[#f9ee1a] border-3 border-[#0d1512] text-[#0d1512] px-5 py-2 text-sm font-bold uppercase tracking-wider shadow-[4px_4px_0px_#fb57b6] hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0px_#fb57b6] transition-all items-center gap-2">
+                Get Stash 🔥
+            </button>
+            <!-- Hamburger -->
+            <button id="hamburger-btn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] group" onclick="document.getElementById('mobile-menu').classList.toggle('translate-y-[-100%]')">
+                <span class="w-6 h-[3px] bg-[#0d1512] rounded-full group-hover:bg-[#fb57b6] transition-colors"></span>
+                <span class="w-6 h-[3px] bg-[#0d1512] rounded-full group-hover:bg-[#fb57b6] transition-colors"></span>
+                <span class="w-4 h-[3px] bg-[#0d1512] rounded-full group-hover:bg-[#fb57b6] transition-colors"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ★ MOBILE MENU OVERLAY ★ -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-[#0d1512] flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-in-out translate-y-[-100%] lg:hidden">
+        <a href="index.html" class="absolute top-5 left-6"><img src="./logo.png" alt="GANG" class="h-10 drop-shadow-[2px_2px_0px_#fb57b6]"></a>
+        <button class="absolute top-5 right-6 text-white text-3xl hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">✕</button>
+        <a href="index.html#products" class="text-[#f9ee1a] font-['Archivo_Black',_sans-serif] text-2xl uppercase tracking-wider hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">Products</a>
+        <a href="index.html" class="text-[#34f0be] font-['Archivo_Black',_sans-serif] text-2xl uppercase tracking-wider hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">Vibes</a>
+        <a href="our-story.html" class="text-white font-['Archivo_Black',_sans-serif] text-2xl uppercase tracking-wider hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">Our Story</a>
+        <a href="#" class="text-white font-['Archivo_Black',_sans-serif] text-2xl uppercase tracking-wider hover:text-[#fb57b6] transition-colors" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">FAQ</a>
+        <div class="mt-4">
+            <button class="bg-[#f9ee1a] border-3 border-white text-[#0d1512] px-10 py-3 font-['Archivo_Black',_sans-serif] text-lg uppercase tracking-wider rounded-full shadow-[5px_5px_0px_#fb57b6] hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_#fb57b6] transition-all" onclick="document.getElementById('mobile-menu').classList.add('translate-y-[-100%]')">
+                Get Stash 🔥
+            </button>
+        </div>
+        <div class="flex gap-4 mt-4">
+            <a href="#" class="w-10 h-10 bg-[#34f0be] border-2 border-white rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors">
+                <iconify-icon icon="mdi:instagram" width="20"></iconify-icon>
+            </a>
+            <a href="#" class="w-10 h-10 bg-[#34f0be] border-2 border-white rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors">
+                <iconify-icon icon="mdi:twitter" width="20"></iconify-icon>
+            </a>
+            <a href="#" class="w-10 h-10 bg-[#34f0be] border-2 border-white rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors">
+                <iconify-icon icon="mdi:tiktok" width="20"></iconify-icon>
+            </a>
+        </div>
+    </div>
+
+    <style>
+        /* --- Pixel Text --- */
+        .pixel-text {
+            font-family: 'Press Start 2P', cursive;
+            -webkit-text-stroke: 2px #b80f8b;
+            color: transparent;
+            background: 
+                radial-gradient(circle at 5px 5px, rgba(0,0,0,0.18) 1.5px, transparent 2px) 0 0 / 12px 12px,
+                linear-gradient(to bottom, #ea580c 50%, #1e40af 50%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 
+                -1px 1px 0 #b80f8b, -2px 2px 0 #b80f8b, -3px 3px 0 #b80f8b, -4px 4px 0 #b80f8b, -5px 5px 0 #b80f8b, -6px 6px 0 #b80f8b,
+                -7px 7px 0 #06b6d4, -8px 8px 0 #06b6d4, -9px 9px 0 #06b6d4, -10px 10px 0 #06b6d4, -11px 11px 0 #06b6d4, -12px 12px 0 #06b6d4,
+                -13px 13px 0 #f97316, -14px 14px 0 #f97316, -15px 15px 0 #f97316, -16px 16px 0 #f97316, -17px 17px 0 #f97316, -18px 18px 0 #f97316,
+                -19px 19px 0 #eab308, -20px 20px 0 #eab308, -21px 21px 0 #eab308, -22px 22px 0 #eab308, -23px 23px 0 #eab308, -24px 24px 0 #eab308;
+        }
+        @media (max-width: 768px) {
+            .pixel-text {
+                -webkit-text-stroke: 1px #b80f8b;
+                background: 
+                    radial-gradient(circle at 3px 3px, rgba(0,0,0,0.15) 1px, transparent 1.5px) 0 0 / 8px 8px,
+                    linear-gradient(to bottom, #ea580c 50%, #1e40af 50%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                text-shadow: 
+                    -1px 1px 0 #b80f8b, -2px 2px 0 #b80f8b, -3px 3px 0 #b80f8b,
+                    -4px 4px 0 #06b6d4, -5px 5px 0 #06b6d4, -6px 6px 0 #06b6d4,
+                    -7px 7px 0 #f97316, -8px 8px 0 #f97316, -9px 9px 0 #f97316,
+                    -10px 10px 0 #eab308, -11px 11px 0 #eab308, -12px 12px 0 #eab308;
+            }
+        }
+
+        /* --- Marquee --- */
+        @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-track { display: flex; width: max-content; animation: marquee-scroll 18s linear infinite; }
+        .marquee-track:hover { animation-play-state: paused; }
+        .marquee-track-slow { display: flex; width: max-content; animation: marquee-scroll 25s linear infinite; }
+
+        /* Wavy Text */
+        @keyframes wavy {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(1deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(8px) rotate(-1deg); }
+        }
+        .wavy-char { display: inline-block; animation: wavy 2s ease-in-out infinite; }
+
+        /* --- Floating Chaos --- */
+        @keyframes float-chaos {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            25% { transform: translateY(-14px) rotate(8deg) scale(1.05); }
+            50% { transform: translateY(4px) rotate(-5deg) scale(0.97); }
+            75% { transform: translateY(-8px) rotate(12deg) scale(1.02); }
+        }
+        .float-emoji { animation: float-chaos 4s ease-in-out infinite; }
+
+        /* --- Psychedelic Pulse Ring --- */
+        @keyframes pulse-ring {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+        }
+        .psyche-ring {
+            position: absolute; border-radius: 50%; pointer-events: none;
+            border: 3px solid; animation: pulse-ring 3s ease-in-out infinite;
+        }
+
+        /* --- Rainbow Shimmer BG --- */
+        @keyframes rainbow-shift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        .rainbow-bg { animation: rainbow-shift 8s linear infinite; }
+
+        /* --- Sticker --- */
+        .sticker {
+            border: 3px solid #0d1512; box-shadow: 4px 4px 0 #0d1512;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .sticker:hover { transform: scale(1.12) rotate(-4deg) !important; box-shadow: 2px 2px 0 #0d1512; }
+
+        /* --- Cursor Glow --- */
+        #cursor-glow {
+            position: fixed; width: 200px; height: 200px; border-radius: 50%;
+            pointer-events: none;
+            background: radial-gradient(circle, rgba(251,87,182,0.3) 0%, rgba(249,238,26,0.1) 40%, transparent 70%);
+            mix-blend-mode: screen; z-index: 9990;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease; opacity: 0;
+        }
+
+        /* --- Product (ALWAYS visible shadow) --- */
+        .product-image {
+            cursor: grab; user-select: none; -webkit-user-drag: none;
+            filter: drop-shadow(-5px 0 0 rgba(251,87,182,0.5)) drop-shadow(5px 0 0 rgba(6,182,212,0.5)) drop-shadow(20px 20px 0 rgba(13,21,18,0.2));
+            transition: filter 0.2s ease;
+        }
+        .product-image.dragging { cursor: grabbing; }
+        .product-image:hover {
+            filter: drop-shadow(-6px 0 0 #fb57b6) drop-shadow(6px 0 0 #06b6d4) drop-shadow(24px 24px 0 rgba(13,21,18,0.3));
+        }
+
+        /* --- Grab Label --- */
+        .grab-label {
+            position: absolute; top: -44px; left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 0.7rem; text-transform: uppercase;
+            letter-spacing: 0.15em; color: #0d1512;
+            background: #f9ee1a; border: 3px solid #0d1512;
+            padding: 5px 16px; border-radius: 999px;
+            white-space: nowrap; pointer-events: none;
+            box-shadow: 3px 3px 0 #fb57b6;
+            animation: float-chaos 2.5s ease-in-out infinite;
+        }
+
+        /* --- Trippy Spiral --- */
+        @keyframes spin-slow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes spin-reverse { 0% { transform: rotate(360deg); } 100% { transform: rotate(0deg); } }
+
+        /* --- Star Burst on Throw --- */
+        @keyframes star-burst {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            100% { transform: scale(2.5) rotate(180deg); opacity: 0; }
+        }
+        .star-burst {
+            position: absolute; font-size: 2rem; pointer-events: none;
+            animation: star-burst 0.6s ease-out forwards;
+        }
+    </style>
+
+    <div id="cur    <!-- ★ STORY HERO ★ -->
+    <main class="relative w-full flex flex-col items-center justify-center overflow-hidden py-32" style="min-height: 60vh;">
+        <!-- Background elements -->
+        <div class="absolute inset-0 pointer-events-none z-[3]" style="visibility:hidden" data-anim="hero">
+            <div class="psyche-ring" style="top:50%;left:50%;width:300px;height:300px;border-color:rgba(251,87,182,0.3);animation-delay:0s"></div>
+            <div class="psyche-ring" style="top:50%;left:50%;width:500px;height:500px;border-color:rgba(249,238,26,0.25);animation-delay:0.8s"></div>
+        </div>
+        
+        <div class="absolute inset-0 pointer-events-none z-[5]" style="visibility:hidden" data-anim="hero">
+            <span class="float-emoji absolute top-[10%] left-[10%] text-3xl md:text-5xl" style="animation-delay:0s">🍕</span>
+            <span class="float-emoji absolute top-[20%] right-[15%] text-4xl md:text-6xl" style="animation-delay:0.5s">📚</span>
+            <span class="float-emoji absolute bottom-[15%] left-[20%] text-3xl md:text-5xl" style="animation-delay:1.2s">💻</span>
+            <span class="float-emoji absolute bottom-[30%] right-[10%] text-4xl md:text-6xl" style="animation-delay:0.8s">💨</span>
+        </div>
+
+        <div class="relative z-10 text-center px-4" style="visibility:hidden" data-anim="hero">
+            <h1 class="pixel-text text-[9vw] md:text-[5rem] lg:text-[7rem] uppercase leading-normal">HOW IT</h1>
+            <h1 class="pixel-text text-[11vw] md:text-[6.5rem] lg:text-[8rem] uppercase leading-none mt-[-10px] md:mt-[-30px]">STARTED</h1>
+        </div>
+    </main>
+
+    <!-- ★ THE STORY CONTENT ★ -->
+    <section class="relative w-full bg-white border-t-4 border-[#0d1512] py-20 md:py-32 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 md:px-12">
+            
+            <!-- Chapter 1 -->
+            <div class="scroll-reveal bg-[#f9ee1a] border-4 border-[#0d1512] rounded-3xl p-8 md:p-12 mb-12 shadow-[8px_8px_0px_#fb57b6] hover:translate-y-1 hover:shadow-[4px_4px_0px_#fb57b6] transition-all relative">
+                <div class="absolute -top-6 -left-4 bg-[#34f0be] border-3 border-[#0d1512] text-[#0d1512] px-4 py-2 rounded-full font-['Archivo_Black',_sans-serif] text-sm md:text-base rotate-[-5deg] shadow-[3px_3px_0px_#0d1512]">CHAPTER 1</div>
+                <h3 class="font-['Press_Start_2P',_cursive] text-lg md:text-xl lg:text-2xl text-[#0d1512] mt-4 mb-6 leading-relaxed">THE DORM ROOM</h3>
+                <p class="font-medium text-sm md:text-lg text-[#0d1512]/80 leading-relaxed mb-4">
+                    It started in a cramped hostel room at SRM Institute. We were broke college students, but we had standards. We were tired of the harsh ash, the chemical aftertaste, and papers that burned out way before the conversation did. 
+                </p>
+                <p class="font-medium text-sm md:text-lg text-[#0d1512]/80 leading-relaxed">
+                    Between cramming for exams and late-night campus walks, we knew there had to be a better way to roll. So, what do engineers do? They experiment.
+                </p>
+            </div>
+
+            <!-- Chapter 2 -->
+            <div class="scroll-reveal bg-[#34f0be] border-4 border-[#0d1512] rounded-3xl p-8 md:p-12 mb-12 shadow-[8px_8px_0px_#06b6d4] hover:translate-y-1 hover:shadow-[4px_4px_0px_#06b6d4] transition-all relative mt-16 md:ml-12 lg:ml-24">
+                <div class="absolute -top-6 -right-4 bg-[#fb57b6] border-3 border-[#0d1512] text-white px-4 py-2 rounded-full font-['Archivo_Black',_sans-serif] text-sm md:text-base rotate-[3deg] shadow-[3px_3px_0px_#0d1512]">CHAPTER 2</div>
+                <h3 class="font-['Press_Start_2P',_cursive] text-lg md:text-xl lg:text-2xl text-[#0d1512] mt-4 mb-6 leading-relaxed">THE MASTERPIECE</h3>
+                <p class="font-medium text-sm md:text-lg text-[#0d1512]/80 leading-relaxed mb-4">
+                    We didn't want just another paper. We wanted an ultra-thin, 100% organic, unbleached hemp masterpiece. It took months of sourcing, failing, and testing (the fun part), but eventually, we found the perfect slow-burn formula.
+                </p>
+            </div>
+
+            <!-- Chapter 3 -->
+            <div class="scroll-reveal bg-[#fb57b6] border-4 border-[#0d1512] rounded-3xl p-8 md:p-12 shadow-[8px_8px_0px_#f9ee1a] hover:translate-y-1 hover:shadow-[4px_4px_0px_#f9ee1a] transition-all relative mt-16">
+                <div class="absolute -top-6 -left-4 bg-[#06b6d4] border-3 border-[#0d1512] text-white px-4 py-2 rounded-full font-['Archivo_Black',_sans-serif] text-sm md:text-base rotate-[-4deg] shadow-[3px_3px_0px_#0d1512]">CHAPTER 3</div>
+                <h3 class="font-['Press_Start_2P',_cursive] text-lg md:text-xl lg:text-2xl text-white mt-4 mb-6 leading-relaxed">THE MOVEMENT</h3>
+                <p class="font-medium text-sm md:text-lg text-white/90 leading-relaxed mb-4">
+                    What started as a personal stash for our squad quickly spread like wildfire across the SRM campus. People started asking for "that gang paper."
+                </p>
+                <p class="font-medium text-sm md:text-lg text-white/90 leading-relaxed">
+                    Now, we're not just a college hustle. GANG is a lifestyle for everyone who respects the ritual, appreciates pure flavor, and stays trippy. No cap.
+                </p>
+            </div>
+
+        </div>
+    </section>           <span class="text-[#f9ee1a] text-lg">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-[#0d1512]/80 font-medium leading-relaxed mb-4">"100% organic and you can actually taste the difference. No more chemical paper taste. This is the one ✨"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-[#f9ee1a] rounded-full border-2 border-[#0d1512] flex items-center justify-center text-[#0d1512] text-xs font-bold">K</div>
+                        <div>
+                            <p class="font-bold text-sm text-[#0d1512]">@kushqueen</p>
+                            <p class="text-[10px] text-[#0d1512]/50">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!--          NEWSLETTER / CTA               -->
+    <!-- ════════════════════════════════════════ -->
+    <section class="relative w-full bg-[#fb57b6] border-t-4 border-[#0d1512] py-14 md:py-20 overflow-hidden">
+        <div class="max-w-3xl mx-auto px-6 md:px-12 text-center">
+            <h2 class="font-['Press_Start_2P',_cursive] text-white text-lg md:text-2xl lg:text-3xl leading-relaxed mb-4 drop-shadow-[3px_3px_0px_#0d1512]">JOIN THE GANG</h2>
+            <p class="text-white/90 text-sm md:text-base font-medium mb-8 max-w-md mx-auto">Get early access to new drops, exclusive merch, and 15% off your first order.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto">
+                <input type="email" placeholder="your@email.com" class="w-full sm:flex-1 px-5 py-3 bg-white border-3 border-[#0d1512] rounded-full text-sm font-semibold text-[#0d1512] placeholder:text-[#0d1512]/40 outline-none focus:shadow-[4px_4px_0px_#f9ee1a] transition-shadow">
+                <button class="w-full sm:w-auto bg-[#f9ee1a] border-3 border-[#0d1512] text-[#0d1512] px-8 py-3 font-['Archivo_Black',_sans-serif] text-sm uppercase tracking-wider rounded-full shadow-[4px_4px_0px_#0d1512] hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0px_#0d1512] transition-all">
+                    I'm In 🤙
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!--               FOOTER                     -->
+    <!-- ════════════════════════════════════════ -->
+    <footer class="w-full bg-[#0d1512] border-t-4 border-[#fb57b6] py-10 md:py-14">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+                <!-- Brand -->
+                <div class="col-span-2 md:col-span-1">
+                    <img src="./logo.png" alt="GANG Logo" class="h-12 w-auto object-contain mb-4 drop-shadow-[3px_3px_0px_#fb57b6]">
+                    <p class="text-white/50 text-xs leading-relaxed">Rolling different since day one. 100% organic. 100% trippy. No cap.</p>
+                </div>
+                <!-- Shop -->
+                <div>
+                    <h4 class="font-['Archivo_Black',_sans-serif] text-[#f9ee1a] text-xs uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Rolling Papers</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Pre-Rolled Cones</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Bundles</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Merch</a></li>
+                    </ul>
+                </div>
+                <!-- Info -->
+                <div>
+                    <h4 class="font-['Archivo_Black',_sans-serif] text-[#f9ee1a] text-xs uppercase tracking-wider mb-4">Info</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Our Story</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Shipping</a></li>
+                        <li><a href="#" class="text-white/60 text-xs hover:text-[#34f0be] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                    <h4 class="font-['Archivo_Black',_sans-serif] text-[#f9ee1a] text-xs uppercase tracking-wider mb-4">Connect</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 bg-[#34f0be] border-2 border-[#0d1512] rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors shadow-[2px_2px_0px_#fb57b6]">
+                            <iconify-icon icon="mdi:instagram" width="18"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-[#34f0be] border-2 border-[#0d1512] rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors shadow-[2px_2px_0px_#fb57b6]">
+                            <iconify-icon icon="mdi:twitter" width="18"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-[#34f0be] border-2 border-[#0d1512] rounded-full flex items-center justify-center text-[#0d1512] hover:bg-[#fb57b6] hover:text-white transition-colors shadow-[2px_2px_0px_#fb57b6]">
+                            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .56.04.81.1v-3.51a6.37 6.37 0 00-.81-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.51V6.79a4.83 4.83 0 01-1-.1z"/></svg>
+                            </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom bar -->
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
+                <p class="text-white/30 text-[10px]">© 2026 GANG Rolling Papers. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-white/30 text-[10px] hover:text-[#34f0be] transition-colors">Privacy</a>
+                    <a href="#" class="text-white/30 text-[10px] hover:text-[#34f0be] transition-colors">Terms</a>
+                    <a href="#" class="text-white/30 text-[10px] hover:text-[#34f0be] transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Particle container for throw bursts -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-[60]"></div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // ─── Cursor Glow ───
+        const glow = document.getElementById("cursor-glow");
+        if (glow && window.innerWidth > 768) {
+            glow.style.opacity = "1";
+            document.addEventListener("mousemove", (e) => {
+                glow.style.left = e.clientX + "px";
+                glow.style.top = e.clientY + "px";
+            });
+        }
+
+        // ─── Particle Burst on throw ───
+        const particleBox = document.getElementById("particles");
+        function burstParticles(cx, cy) {
+            const emojis = ["⚡","✨","🔥","💨","🌀","💎","🫧","🪬","👁️","🍃"];
+            for (let i = 0; i < 8; i++) {
+                const span = document.createElement("span");
+                span.className = "star-burst";
+                span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                span.style.left = (cx + (Math.random()-0.5)*80) + "px";
+                span.style.top = (cy + (Math.random()-0.5)*80) + "px";
+                particleBox.appendChild(span);
+                setTimeout(() => span.remove(), 700);
+            }
+        }
+
+        // ─── GSAP Entrance ───
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+        tl.fromTo("[data-anim='nav']", 
+            { y: -30, autoAlpha: 0 }, 
+            { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.1 }
+        )
+        .fromTo("[data-anim='hero']", 
+            { y: 30, autoAlpha: 0 }, 
+            { y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.06, ease: "power4.out" },
+            "-=0.3"
+        )
+        .fromTo("[data-anim='scatter']",
+            { scale: 0, autoAlpha: 0, rotation: () => gsap.utils.random(-25, 25) },
+            { scale: 1, autoAlpha: 1, rotation: (i) => [-6,5,-3,4,-2,0,0][i] || 0, duration: 0.5, stagger: { each: 0.1, from: "random" }, ease: "back.out(2.5)" },
+            "-=0.5"
+        );
+
+        // ─── Scroll Animations for below-fold sections ───
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.fromTo(entry.target, 
+                        { y: 30, opacity: 0 },
+                        { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }
+                    );
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
+
+        // ─── Physics Engine (ALL DEVICES) ───
+        function initPhysics() {
+            const el = document.getElementById("product-physics");
+            const hero = document.getElementById("hero-main");
+            const label = el.querySelector(".grab-label");
+
+            gsap.set(el, { clearProps: "all" });
+            // Reparent to hero so absolute positioning matches our coordinate system
+            hero.appendChild(el);
+            el.style.visibility = "visible";
+            el.style.position = "absolute";
+            el.style.left = "0";
+            el.style.top = "0";
+            el.style.willChange = "transform";
+            el.style.zIndex = "20";
+
+            const elRect = el.getBoundingClientRect();
+            let W, H;
+            function measure() {
+                const r = hero.getBoundingClientRect();
+                W = r.width; H = r.height;
+            }
+            measure();
+
+            const imgW = elRect.width, imgH = elRect.height;
+            let x = W/2, y = H/2 - 20;
+            let vx = 0, vy = 0;
+            let angle = -15 * Math.PI / 180, av = 0;
+
+            const G = 0.04, FRIC = 0.997, BOUNCE = 0.75, AFRIC = 0.998, PAD = 8;
+            let drag = false, ox = 0, oy = 0, hist = [];
+
+            function render() {
+                el.style.transform = `translate(${x - imgW/2}px, ${y - imgH/2}px) rotate(${angle*180/Math.PI}deg)`;
+            }
+
+            function tick() {
+                if (!drag) {
+                    vy += G; vx *= FRIC; vy *= FRIC; av *= AFRIC;
+                    x += vx; y += vy; angle += av;
+                    const hw = imgW*0.2, hh = imgH*0.2;
+                    if (y+hh > H-PAD) { y = H-PAD-hh; vy *= -BOUNCE; av += vx*0.002; vx *= 0.88; }
+                    if (y-hh < PAD) { y = PAD+hh; vy *= -BOUNCE; }
+                    if (x+hw > W-PAD) { x = W-PAD-hw; vx *= -BOUNCE; av -= vy*0.001; }
+                    if (x-hw < PAD) { x = PAD+hw; vx *= -BOUNCE; av += vy*0.001; }
+                }
+                render();
+                requestAnimationFrame(tick);
+            }
+
+            function pos(e) {
+                const c = e.touches ? e.touches[0] : e;
+                const r = hero.getBoundingClientRect();
+                return { x: c.clientX - r.left, y: c.clientY - r.top, cx: c.clientX, cy: c.clientY };
+            }
+
+            function onDown(e) {
+                e.preventDefault(); drag = true;
+                el.querySelector(".product-image").classList.add("dragging");
+                if (label) label.style.opacity = "0";
+                const p = pos(e);
+                ox = p.x - x; oy = p.y - y;
+                vx = 0; vy = 0; av = 0;
+                hist = [{ ...p, t: Date.now() }];
+            }
+            function onMove(e) {
+                if (!drag) return; e.preventDefault();
+                const p = pos(e);
+                x = p.x - ox; y = p.y - oy;
+                const now = Date.now();
+                hist.push({ ...p, t: now });
+                hist = hist.filter(h => now - h.t < 100);
+                av = (p.x - (hist[0]?.x || p.x)) * 0.002;
+            }
+            function onUp(e) {
+                if (!drag) return; drag = false;
+                el.querySelector(".product-image").classList.remove("dragging");
+                const now = Date.now();
+                const pts = hist.filter(h => now - h.t < 100);
+                if (pts.length >= 2) {
+                    const a = pts[0], b = pts[pts.length-1];
+                    const dt = (b.t - a.t) || 1;
+                    vx = Math.max(-55, Math.min(55, (b.x-a.x)/dt*16));
+                    vy = Math.max(-55, Math.min(55, (b.y-a.y)/dt*16));
+                    av = vx * 0.006;
+                    const lastP = pts[pts.length-1];
+                    if (Math.abs(vx) > 5 || Math.abs(vy) > 5) {
+                        burstParticles(lastP.cx, lastP.cy);
+                    }
+                }
+            }
+
+            el.addEventListener("mousedown", onDown);
+            el.addEventListener("touchstart", onDown, { passive: false });
+            document.addEventListener("mousemove", onMove);
+            document.addEventListener("touchmove", onMove, { passive: false });
+            document.addEventListener("mouseup", onUp);
+            document.addEventListener("touchend", onUp);
+
+            render(); tick();
+            window.addEventListener("resize", () => { measure(); if(x>W) x=W/2; if(y>H) y=H/2; });
+        }
+    });
+    </script>
+
+</body></html>
